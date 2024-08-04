@@ -16,3 +16,13 @@
 <div class="footer">
   <p>&copy; 2024 Your Company Name. All rights reserved.</p>
 </div>
+
+<div
+  id="a2hs-notification"
+  [class.hidden]="!showA2HSNotification"
+  class="a2hs-notification"
+>
+  <p>Add this app to your home screen for a better experience.</p>
+  <button (click)="addToHomeScreen()">Add to Home Screen</button>
+  <button (click)="dismissNotification()">Dismiss</button>
+</div>
