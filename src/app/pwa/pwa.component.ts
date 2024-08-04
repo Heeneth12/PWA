@@ -5,7 +5,7 @@ import { Component, HostListener } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './pwa.component.html',
-  styleUrl: './pwa.component.css',
+  styleUrls: ['./pwa.component.css'],
 })
 export class PwaComponent {
   deferredPrompt: any;
@@ -15,7 +15,7 @@ export class PwaComponent {
   onBeforeInstallPrompt(event: Event) {
     event.preventDefault();
     this.deferredPrompt = event;
-    this.showA2HSNotification = true; // Show the notification
+    this.showA2HSNotification = true;
   }
 
   addToHomeScreen() {
@@ -30,10 +30,10 @@ export class PwaComponent {
         this.deferredPrompt = null;
       });
     }
-    this.showA2HSNotification = false; // Hide the notification
+    this.showA2HSNotification = false;
   }
 
   dismissNotification() {
-    this.showA2HSNotification = false; // Hide the notification
+    this.showA2HSNotification = false;
   }
 }

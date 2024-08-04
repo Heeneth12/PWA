@@ -94,8 +94,7 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "src",
-                "output": "/"
+                "input": "public"
               }
             ],
             "styles": ["src/styles.css"],
